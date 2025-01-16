@@ -14,7 +14,7 @@ const TextDark = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.primary,
   fontSize: "1rem",
 }));
-const TextDarkSecondary = styled(Typography)(({ theme }) => ({
+const TextDarkSecondary = styled(Typography)(({}) => ({
   color: "gray",
   fontSize: ".8rem",
   textTransform: "capitalize",
@@ -43,7 +43,7 @@ const PrimaryButton = styled(Button)(({ theme }) => ({
   fontWeight: 600,
   padding: ".3rem 2rem",
 }));
-const PrimaryButtonSecondary = styled(PrimaryButton)(({ theme }) => ({
+const PrimaryButtonSecondary = styled(PrimaryButton)(({}) => ({
   fontWeight: 400,
   fontSize: ".8rem",
   textTransform: "capitalize",

@@ -1,5 +1,6 @@
 import ReduxProviderLayout from "@/components/Layouts/ReduxProviderLayout";
 // or `v1X-appRouter` if you are using Next.js v1X
+import { Suspense } from "react";
 import "./globals.css";
 export default async function RootLayout({
   children,
@@ -10,7 +11,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ReduxProviderLayout>{children}</ReduxProviderLayout>
+        <Suspense>
+          <ReduxProviderLayout>{children}</ReduxProviderLayout>
+        </Suspense>
       </body>
     </html>
   );

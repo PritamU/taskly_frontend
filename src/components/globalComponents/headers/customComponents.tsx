@@ -30,7 +30,7 @@ const CustomMobileSubHeader = styled(AppBar)(({ theme }) => ({
 }));
 
 // Mobile SubHeader Toolbar Custom Component
-const CustomMobileSubHeaderToolbar = styled(Toolbar)(({ theme }) => ({
+const CustomMobileSubHeaderToolbar = styled(Toolbar)(({}) => ({
   backgroundColor: "white",
   justifyContent: "space-between",
 }));

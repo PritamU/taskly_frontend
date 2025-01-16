@@ -44,8 +44,7 @@ const RegisterComponent = () => {
   const formValueHandler = (
     fieldName: string,
     value: string,
-    hasError: boolean,
-    isOptional?: boolean
+    hasError: boolean
   ) => {
     const updatedField = { [fieldName]: { value, hasError } };
     setFormValues({ ...formValues, ...updatedField });

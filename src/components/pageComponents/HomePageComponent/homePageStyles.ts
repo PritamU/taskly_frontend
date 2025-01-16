@@ -1,6 +1,6 @@
 import { Select, styled } from "@mui/material";
 
-const SelectComponent = styled(Select)(({ theme }) => ({
+const SelectComponent = styled(Select)(({}) => ({
   width: "50%",
   maxWidth: "200px",
   background: "white",

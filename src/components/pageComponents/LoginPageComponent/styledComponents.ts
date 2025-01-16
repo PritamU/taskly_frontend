@@ -6,7 +6,7 @@ const TextFieldLabel = styled(Typography)(({ theme }) => ({
   fontWeight: 600,
 }));
 
-const CustomTextField = styled(TextField)(({ theme }) => ({
+const CustomTextField = styled(TextField)(({}) => ({
   // backgroundColor: "white",
   "& .MuiInputBase-root": {
     backgroundColor: "white",
