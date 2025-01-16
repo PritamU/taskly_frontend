@@ -11,6 +11,7 @@ import { setSnackbar, setUser } from "@/redux/slices/userSlice";
 import { RootState } from "@/redux/store";
 import {
   Alert,
+  Box,
   Container,
   CssBaseline,
   Snackbar,
@@ -77,7 +78,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         />
 
         <DesktopHeader />
-        <Container maxWidth="lg">{children}</Container>
+        <Container maxWidth="lg" sx={{ minHeight: { sm: "100vh" } }}>
+          {children}
+        </Container>
         {snackBar.open && (
           <Snackbar
             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
@@ -101,13 +104,19 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </Alert>
           </Snackbar>
         )}
-        <Footer />
+
         {!dontShowBottomNav && (
           <>
-            <div style={{ height: "100px" }}></div>
+            <Box
+              sx={{ height: "100px", display: { xs: "block", sm: "none" } }}
+            ></Box>
             <BottomNavigationComponent />
           </>
         )}
+
+        <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Footer />
+        </Box>
       </ThemeProvider>
     </>
   );

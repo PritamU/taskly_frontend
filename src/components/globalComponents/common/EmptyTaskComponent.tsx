@@ -1,5 +1,6 @@
 import { Stack } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import {
   PrimaryButtonSecondary,
   TextDarkSecondary,
@@ -12,6 +13,7 @@ const EmptyTaskComponent = ({
   title: string;
   type: "task" | "subtask";
 }) => {
+  const router = useRouter();
   return (
     <Stack alignItems={"center"} justifyContent={"center"}>
       <Stack gap={"1rem"} alignItems={"center"}>
@@ -23,7 +25,12 @@ const EmptyTaskComponent = ({
         />
         <TextDarkSecondary>{title}</TextDarkSecondary>
         {type === "task" && (
-          <PrimaryButtonSecondary size="small">
+          <PrimaryButtonSecondary
+            size="small"
+            onClick={() => {
+              router.push("/tasks/create-task");
+            }}
+          >
             Create a Task
           </PrimaryButtonSecondary>
         )}

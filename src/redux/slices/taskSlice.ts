@@ -30,7 +30,7 @@ const initialState: TaskSliceInterface = {
   taskList: [],
   taskDetails: null,
   isTaskListLoading: true,
-  isTaskDetailsLoading: true,
+  isTaskDetailsLoading: false,
   isTaskUpdatedLoading: false,
   totalTasks: 0,
 };

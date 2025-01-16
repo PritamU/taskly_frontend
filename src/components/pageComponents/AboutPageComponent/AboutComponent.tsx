@@ -1,3 +1,4 @@
+import Footer from "@/components/globalComponents/Footer";
 import {
   PrimaryButton,
   PrimaryHeaderDark,
@@ -8,7 +9,7 @@ import { useLogoutUserMutation } from "@/redux/apis/userApi";
 import { ApiErrorInterface } from "@/redux/commonInterfaces";
 import { setIsUserUpdateLoading, setSnackbar } from "@/redux/slices/userSlice";
 import { RootState } from "@/redux/store";
-import { Avatar, Button, Paper, Stack } from "@mui/material";
+import { Avatar, Box, Button, Paper, Stack } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -88,7 +89,7 @@ const AboutComponent = () => {
         justifyContent={"space-between"}
       >
         <Stack flexDirection={"row"} alignItems={"flex-start"} gap={".5rem"}>
-          <Avatar sx={{ bgcolor: "primary.main" }}>{name[0]}</Avatar>
+          <Avatar sx={{ bgcolor: "secondary.main" }}>{name[0]}</Avatar>
           <div>
             <TextDark>{name}</TextDark>
             <TextDarkSecondary sx={{ textTransform: "lowercase !important" }}>
@@ -128,6 +129,9 @@ const AboutComponent = () => {
         </TextDarkSecondary>
         <PrimaryButton>View Portfolio</PrimaryButton>
       </Stack>
+      <Box sx={{ display: { xs: "block", sm: "none" } }}>
+        <Footer />
+      </Box>
     </Stack>
   );
 };
