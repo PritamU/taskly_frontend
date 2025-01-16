@@ -44,16 +44,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       dispatch(setUser({ name, email, isAuth: true }));
     }
     if (isError) {
-      // if ("data" in error) {
-      //   const errorData = error.data as ApiErrorInterface;
-      dispatch(
-        setSnackbar({
-          open: true,
-          message: JSON.stringify(error),
-          type: "info",
-        })
-      );
-      // }
       dispatch(setUser({ name: "", email: "", isAuth: false }));
       router.push("/login");
     }
