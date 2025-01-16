@@ -71,6 +71,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             display: {
               xs: headerMarginExcludeRoutes.includes(path) ? "none" : "flex",
               sm: "flex",
+              p: ".5rem",
             },
           }}
         />

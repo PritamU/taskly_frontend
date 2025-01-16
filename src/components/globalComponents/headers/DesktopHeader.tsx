@@ -3,7 +3,7 @@ import { Stack, Tooltip } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { IconButtonLight, PrimaryHeaderLight } from "../globalStyledComponents";
+import { IconButtonLight } from "../globalStyledComponents";
 import {
   CustomDesktopHeader,
   CustomDesktopHeaderToolbar,
@@ -14,22 +14,18 @@ const DesktopHeader = () => {
   return (
     <CustomDesktopHeader>
       <CustomDesktopHeaderToolbar>
-        <PrimaryHeaderLight sx={{ color: "whitesmoke" }}>
-          <Link
-            style={{
-              textDecoration: "none",
-              color: "inherit",
-            }}
-            href={"/"}
-          >
-            <Image
-              src="/logo-light.webp"
-              alt="Taskly"
-              height={40}
-              width={140}
-            />
-          </Link>
-        </PrimaryHeaderLight>
+        <Link
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+            height: "30px",
+            width: "150px",
+            position: "relative",
+          }}
+          href={"/"}
+        >
+          <Image src="/logo-light.webp" alt="Taskly" fill />
+        </Link>
         <Stack flexDirection={"row"} alignItems={"center"} gap={".5rem"}>
           <IconButtonLight
             onClick={() => {
