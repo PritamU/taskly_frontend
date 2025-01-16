@@ -9,6 +9,7 @@ import { useLoginUserMutation } from "@/redux/apis/userApi";
 import { ApiErrorInterface } from "@/redux/commonInterfaces";
 import { setSnackbar, setUser } from "@/redux/slices/userSlice";
 import { Stack } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -129,7 +130,7 @@ const LoginComponent = () => {
         flexDirection: "column",
         justifyContent: "flex-start",
         rowGap: 3,
-        alignItems: "flex-start",
+        alignItems: "center",
         padding: "2rem",
         boxShadow: { md: 3 },
         borderRadius: "2rem",
@@ -139,6 +140,10 @@ const LoginComponent = () => {
         onSubmitHandler();
       }}
     >
+      <Stack sx={{ display: { xs: "flex", sm: "none" } }}>
+        <Image src="/logo-dark.webp" alt="Taskly" height={30} width={150} />
+      </Stack>
+
       <Stack
         sx={{
           flexDirection: "column",

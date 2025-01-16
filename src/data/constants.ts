@@ -1,6 +1,6 @@
 import { PriorityTypes } from "./commonTypes";
 
-const APP_NAME = "Taskmyshit";
+const APP_NAME = "Taskly";
 
 const TAG_DATA_FOR_FORM = [
   {

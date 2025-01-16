@@ -1,5 +1,6 @@
 import { ListAlt, Person } from "@mui/icons-material";
 import { Stack, Tooltip } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { IconButtonLight, PrimaryHeaderLight } from "../globalStyledComponents";
@@ -21,7 +22,12 @@ const DesktopHeader = () => {
             }}
             href={"/"}
           >
-            TASKMYSHIT
+            <Image
+              src="/logo-light.webp"
+              alt="Taskly"
+              height={40}
+              width={140}
+            />
           </Link>
         </PrimaryHeaderLight>
         <Stack flexDirection={"row"} alignItems={"center"} gap={".5rem"}>

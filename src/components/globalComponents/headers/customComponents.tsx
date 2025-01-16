@@ -51,6 +51,7 @@ const CustomDesktopHeaderToolbar = styled(Toolbar)(({ theme }) => ({
   justifyContent: "space-between",
   alignItems: "center",
   width: "100vw",
+  padding: "1rem",
 }));
 
 // Mobile SubHeader Toolbar Custom Component
