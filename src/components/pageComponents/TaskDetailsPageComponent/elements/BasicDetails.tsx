@@ -46,7 +46,7 @@ const BasicDetails = () => {
             alignItems={"flex-start"}
             justifyContent={"space-between"}
           >
-            <PrimaryHeaderDark>{taskDetails!.title}</PrimaryHeaderDark>
+            <PrimaryHeaderDark>{taskDetails?.title}</PrimaryHeaderDark>
             <Stack flexDirection={"row"} alignItems={"center"} gap={"1rem"}>
               <Chip
                 variant="filled"
